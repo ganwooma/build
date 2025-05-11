@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>설명 문서</title>
+  <style>
+    body {
+      font-family: 'Pretendard', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 40px;
+      background-color: #fff;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+      border-radius: 12px;
+    }
+
+    h1 {
+      font-size: 2.4em;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      margin-top: 40px;
+      color: #34495e;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 8px;
+    }
+
+    p {
+      margin: 16px 0;
+    }
+
+    strong {
+      color: #e74c3c;
+    }
+
+    .note {
+      background-color: #f0f9ff;
+      border-left: 6px solid #3498db;
+      padding: 16px;
+      margin: 20px 0;
+      border-radius: 6px;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HOW TO SERVER SETUP</h1>
+    <p>이 문서는 didi's 다크 포레스트 리터치 버전의 <strong>서버 셋업</strong>을 도와주는 문서입니다.</p>
+
+    <h2>1. JDK 설치</h2>
+    <p>본 플러그인은 JDK 21을 지원합니다.</p>
+    <p>Oracle JDK 21 설치를 권장드립니다.</p>
+    <a href="https://www.oracle.com/java/technologies/downloads/#java21">Oracle JDK 21 설치</a>
+    <p>리눅스에 경우</p>
+    <p><code>sudo wget https://download.java.net/java/GA/jdk21/fd2272bbf8e04c3dbaee13770090416c/35/GPL/openjdk-21_linux-x64_bin.tar.gz</code></p>
+    <p>를 사용하십시오</p>
+    <p>자신의 <strong>운영 체제</strong>에 맞는 버전을 다운로드 하시길 바랍니다.</p>
+    
+
+
+    <h2>2. 플러그인 빌드</h2>
+    <p>Intellij를 설치하십시오.</p>
+    <a href="https://www.jetbrains.com/idea/">Intellij 설치</a>
+    <p>Intellij에서 Minecraft Development Plugin을 설치하십시오.</p>
+    <p>깃허브에서 설치한 파일을 프로젝트 파일로 오픈하십시오.</p>
+    <p>src/main/resource/config.yml을 설정하고 터미널에서 <code>./gradlew shadowJar</code>를 실행하십시오.</p>
+    <p>프로젝트 파일/build/libs/에 jar파일이 있을 것입니다.</p>
+    <p>이 파일을 서버 plugins 파일에 넣으십시오.</p>
+    <p>마찬가지로 무기 강화 플러그인, Simple Voice Chat 플러그인도 넣으십시오.</p>
+    <div class="note">
+      💡 <strong>참고:</strong> 빌드를 위해선 윈도우를 사용하시는 것을 추천드립니다.
+    </div>
+
+    <h2>3. 서버 파일</h2>
+    <a href="https://drive.google.com/file/d/1mf88CBpYVSg7p8O8XN1OY6xAoRSc9VRp/view?usp=sharing">서버 파일 다운로드</a>
+    <p>에서 SETUP.zip을 다운로드 받고 압축을 푸십시오</p>
+    <p>윈도우에선 start.bat, 리눅스에서 start.sh를 실행하십시오.</p>
+    <p>eula.txt파일의 eula=false를 eula=true로 변경하고 다시 실행하십시오</p>
+    <p>plugins 폴더에 plugin 파일을 넣고 다시 start.bat / start.sh를 실행하십시오.</p>
+  </div>
+</body>
+</html>
